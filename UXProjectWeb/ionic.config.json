@@ -1,0 +1,7 @@
+{
+  "name": "UXProjectWeb",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
