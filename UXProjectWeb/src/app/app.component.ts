@@ -4,15 +4,18 @@ import { Component } from '@angular/core';
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss'],
 })
+
+// Paginas del menú lateral
 export class AppComponent {
   public appPages = [
-    { title: 'Inbox', url: '/folder/Inbox', icon: 'mail' },
-    { title: 'Outbox', url: '/folder/Outbox', icon: 'paper-plane' },
-    { title: 'Favorites', url: '/folder/Favorites', icon: 'heart' },
-    { title: 'Archived', url: '/folder/Archived', icon: 'archive' },
-    { title: 'Trash', url: '/folder/Trash', icon: 'trash' },
-    { title: 'Spam', url: '/folder/Spam', icon: 'warning' },
+    { title: 'Inicio', url: '/inicio', icon: 'home' },
+    { title: 'Calendario', url: '/calendario', icon: 'calendar' },
+    { title: 'Estadisticas', url: '/estadisticas', icon: 'stats-chart' },
+    { title: 'Ligas y Equipos', url: '/ligas-y-equipos', icon: 'heart' },
+    { title: 'Registro de Equipos', url: '/registro-de-equipos', icon: 'archive' },
+    { title: 'Nueva Temporada', url: '/nueva-temporada', icon: 'calendar-clear' },
+    { title: 'Árbitros', url: '/arbitros', icon: 'warning' },
+    { title: 'Salir', url: '/login', icon: 'exit' },
   ];
-  public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
   constructor() {}
 }

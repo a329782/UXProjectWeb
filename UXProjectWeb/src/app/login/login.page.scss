@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Roboto:wght@400;700&display=swap');
+
+ion-content {
+    --ion-background-color: white;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-inline: 20px;
+    //background-color: yellow;
+    color: black;
+    min-height: 90%;
+}
+
+img {
+    width: 95px;
+    height: 86px;
+    align-self: center;
+    opacity: 100%;
+}
+
+.login-container {
+    //background-color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 22px;
+    padding-top: 40px;
+    
+    #txt-login {
+        align-self: auto;
+        padding-left: 33px;
+    }
+
+}
+
+.text-boxes {
+    //background-color: purple;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 21px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    
+}
+
+ion-input {
+    //background-color: aqua;
+    max-width: 270px;
+    flex-basis: 61px;
+    font-family: 'Inter', sans-serif;
+    --color: gray;
+    --padding-start: 16px;
+    --background: white;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    border-color: gray;
+
+    ion-icon {
+        padding-left: 20px;
+    }
+}
+
+#txt-area-email {
+    height: 61px;
+}
+
+ion-button {
+    width: 271px;
+    height: 42px;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+#bttn-login {
+    --background: white;
+    --border-style: solid;
+    --border-color: rgba(0, 0, 0, 0.4);
+    --border-width: 1px;
+    --border-radius: 18px;
+    color: black;
+}
+
+#txt-forgot-password {
+    color: #007AFF;
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+    font-size: 12px;
+    font-family: 'Inter', 'sans-serif';
+}
+
+.login-with {
+    //background-color: red;
+    color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: flex-end;
+    padding-top: 105px;
+    //height: 105px;
+    gap: 12px;
+    font-size: 12px;
+    font-family: 'Inter', sans-serif;
+}
+
+#txt-login-with {
+    //background-color: aqua;
+    margin-top: -3px;
+}
+
+#line-1 {
+    
+    width: 100px;
+    height: 1px;
+    background:rgba(0, 0, 0, 0.4);
+}
+
+#line-2 {
+    
+    width: 100px;
+    height: 1px;
+    background:rgba(0, 0, 0, 0.4)
+}
+
+.container-connect {
+    //background-color: green;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    ion-button {
+        width: 144px;
+        height: 32px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 12px;
+        --border-radius: 18px;
+        .bttn-container-fb {
+            display: flex;
+            justify-content: flex-start;
+            min-width: 144px;
+            gap: 20px;
+            ion-icon {
+                padding-left: 20px;
+                font-size: 13px;
+                color: black;
+            }
+        }
+        .bttn-container-google {
+            display: flex;
+            justify-content: flex-start;
+            min-width: 144px;
+            gap: 20px;
+            ion-icon {
+                padding-left: 20px;
+                font-size: 13px;
+                color: black;
+            }
+        }
+    }
+}
+
+#bttn-facebook {
+    --background: #5C7DC1;
+}
+
+#bttn-google {
+    --background: #C6C9D0;
+}
+
+.no-account-container {
+    //background-color: red;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 12px;
+    padding-top: 46px;
+}
+
+#txt-no-account {
+    color: rgba(118,118,118,0.9)
+}
+
+#txt-register {
+    color: #007AFF;
+}
