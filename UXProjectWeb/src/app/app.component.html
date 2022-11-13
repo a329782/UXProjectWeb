@@ -1,16 +1,50 @@
 <ion-app>
   <ion-split-pane contentId="main-content">
-    <ion-menu contentId="main-content" type="overlay">
+    <ion-menu [style.display]="'none'" contentId="main-content" type="overlay" id="menu-lateral">
       <ion-content>
         <ion-list id="inbox-list">
           <ion-list-header>Menú</ion-list-header>
 
-          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
-            <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
-              <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
-              <ion-label>{{ p.title }}</ion-label>
-            </ion-item>
-          </ion-menu-toggle>
+          <ion-item routerLink="/inicio" lines="none" detail="false" routerLinkActive="selected">
+            <ion-icon slot="start" ios="home-outline" md="home-sharp"></ion-icon>
+            <ion-label>Inicio</ion-label>
+          </ion-item>
+          
+          <ion-item routerLink="/calendario" lines="none" detail="false" routerLinkActive="selected">
+            <ion-icon slot="start" ios="calendar-outline" md="calendar-sharp"></ion-icon>
+            <ion-label>Calendario</ion-label>
+          </ion-item>
+
+          <ion-item routerLink="/estadisticas" lines="none" detail="false" routerLinkActive="selected">
+            <ion-icon slot="start" src="../assets/custom-icons/estadisticas.svg"></ion-icon>
+            <ion-label>Estadísticas</ion-label>
+          </ion-item>
+
+          <ion-item routerLink="/ligas-y-equipos" lines="none" detail="false" routerLinkActive="selected">
+            <ion-icon slot="start" src="../assets/custom-icons/teams.svg"></ion-icon>
+            <ion-label>Ligas y Equipos</ion-label>
+          </ion-item>
+
+          <ion-item routerLink="/registro-de-equipos" lines="none" detail="false" routerLinkActive="selected">
+            <ion-icon slot="start" src="../assets/custom-icons/addTeams.svg"></ion-icon>
+            <ion-label>Registro de Equipos</ion-label>
+          </ion-item>
+
+          <ion-item routerLink="/nueva-temporada" lines="none" detail="false" routerLinkActive="selected">
+            <ion-icon slot="start" ios="calendar-clear-outline" md="calendar-clear-sharp"></ion-icon>
+            <ion-label>Nueva Temporada</ion-label>
+          </ion-item>
+          
+          <ion-item routerLink="/arbitros" lines="none" detail="false" routerLinkActive="selected">
+            <ion-icon slot="start" src="../assets/custom-icons/arbitro.svg"></ion-icon>
+            <ion-label>Árbitros</ion-label>
+          </ion-item>
+
+          <ion-item routerLink="/login" lines="none" detail="false" routerLinkActive="selected">
+            <ion-icon slot="start" ios="exit-outline" md="exit-sharp"></ion-icon>
+            <ion-label>Salir</ion-label>
+          </ion-item>
+
         </ion-list>
 
       </ion-content>
