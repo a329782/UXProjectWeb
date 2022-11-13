@@ -7,7 +7,11 @@ const routes: Routes = [
   {
     path: '',
     component: CalendarioPage
+  },  {
+    path: 'calendario2',
+    loadChildren: () => import('./calendario2/calendario2.module').then( m => m.Calendario2PageModule)
   }
+
 ];
 
 @NgModule({
