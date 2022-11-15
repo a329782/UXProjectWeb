@@ -12,11 +12,11 @@
 <ion-content>
   <style>
     table, th, td {
-      border:1px solid black;
+        border:1px solid black;
     }
     </style>
-  <table style="width:100%">
-    <tr>
+  <table style="width:100%; position:absolute;  top:100px;">
+    <tr style="background-color: #7a6200;">
       <th>Horario</th>
       <th>Equipo1</th>
       <th>VS</th>
@@ -41,27 +41,29 @@
     </tr>
 
     <tr>
-      <td>15:00  <ion-button  [routerLink]="['/calendario/calendario2']">Cambiar</ion-button> </td>
+      <td>14:00  <ion-button  [routerLink]="['/calendario/calendario2']">Cambiar</ion-button> </td>
       <td>Temerarios</td>
       <td></td>
       <td>Capis</td>
       <td>Lucas Ponce</td>
     </tr>
     <tr>
-      <td>12:00  <ion-button  [routerLink]="['/calendario/calendario2']">Cambiar</ion-button> </td>
-      <td>Temerarios</td>
+      <td>15:00  <ion-button  [routerLink]="['/calendario/calendario2']">Cambiar</ion-button> </td>
+      <td>TNT </td>
       <td></td>
-      <td>Capis</td>
+      <td>Cadetes</td>
       <td>Mateo Santillanes</td>
     </tr>
 
     <tr>
-      <td>12:00  <ion-button  [routerLink]="['/calendario/calendario2']">Cambiar</ion-button> </td>
+      <td>16:00 <ion-button  [routerLink]="['/calendario/calendario2']">Cambiar</ion-button> </td>
       <td>Patito</td>
       <td></td>
       <td>Caballito</td>
       <td>Sebastian Calzado</td>
     </tr>
   </table>
+
+ 
   
 </ion-content>
