@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -7,11 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginPage implements OnInit {
 
-  constructor() { }
+  constructor(public menu: MenuController) { }
 
   ngOnInit() {
-    const menu = document.getElementById("menu-lateral");
-    if (menu.style.display != 'none') menu.style.display = 'none';
+    // Desactiva el menu cuando se inicializa esta pagina
+    this.menu.enable(false);
+  }
+
+  ionViewWillEnter() {
+    // Desactiva el menu cuando entra a esta pagina
+    this.menu.enable(false);
+  }
+
+  ionViewDidLeave() {
+    // Activa el menu cuando pasa a otra pagina
+    this.menu.enable(true);
   }
 
 }
