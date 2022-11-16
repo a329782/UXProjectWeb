@@ -1,11 +1,16 @@
 @media screen and (min-width: 992px) {
   ion-menu {
-    max-width: 10% !important;
+    max-width: 20% !important;
   }
 }
 
 ion-menu ion-content {
-  --background: var(--ion-item-background, var(--ion-background-color, #fff));
+  --background: #fff6f2;
+  --ion-background-color: #fff6f2;
+}
+
+ion-text {
+  font-size: 115%;
 }
 
 ion-menu.md ion-content {

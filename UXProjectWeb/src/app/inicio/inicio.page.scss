@@ -1,6 +1,26 @@
-ion-col {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-inline: 20px;
+  //background-color: yellow;
+  //color: black;
+  min-height: 90%;
+}
+
+ion-col{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+h1{
+  font-weight: bold;
+  font-size: 250%;
+}
+
+img{
+  width: 50%;
+  height: 50%;
+}
