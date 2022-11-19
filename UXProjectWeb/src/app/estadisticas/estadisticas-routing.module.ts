@@ -18,6 +18,10 @@ const routes: Routes = [
   {
     path: 'estadisticas4',
     loadChildren: () => import('./estadisticas4/estadisticas4.module').then( m => m.Estadisticas4PageModule)
+  },
+  {
+    path: 'estadisticas5',
+    loadChildren: () => import('./estadisticas5/estadisticas5.module').then( m => m.Estadisticas5PageModule)
   }
 
 ];

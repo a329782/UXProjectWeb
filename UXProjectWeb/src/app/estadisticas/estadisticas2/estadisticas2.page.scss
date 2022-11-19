@@ -1,0 +1,38 @@
+.team-bttn-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    ion-label.pj-lbl{
+        position: static;
+        left: 20px;
+    }
+    ion-label.pj-lbl{
+        position: relative;
+        left: 20px;
+    }
+    
+    ion-label.pg-lbl{
+        position: relative;
+        left: 20px;
+    }
+    ion-label.pe-lbl{
+        position: relative;
+        left: 20px;
+    }
+    ion-label.pp-lbl{
+        position: relative;
+        left: 20px;
+    }
+    ion-label.gf-lbl{
+        position: relative;
+        left: 20px;
+    }
+    ion-label.gc-lbl{
+        position: relative;
+        left: 20px;
+    }
+
+}

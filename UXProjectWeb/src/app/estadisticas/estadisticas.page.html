@@ -7,9 +7,31 @@
   </ion-toolbar>
 </ion-header>
 
+<div class="item-container">
+
+  <ion-item>
+    <ion-select placeholder="Seleccionar liga" interface="popover">
+      <ion-select-option value="martes">Liga Martes</ion-select-option>
+      <ion-select-option value="viernes">Liga Viernes</ion-select-option>
+      <ion-select-option value="sabado">Liga Sabado</ion-select-option>
+    </ion-select>
+    
+  </ion-item>
+</div>
+
+<div class="item-container">
+
+  <ion-item>
+    <ion-select placeholder="Seleccionar temporada" interface="popover">
+      <ion-select-option value="martes">Invierno 2023 </ion-select-option>
+      <ion-select-option value="viernes">Verano 2023</ion-select-option>
+    </ion-select>
+    
+  </ion-item>
+</div>
 
 <ion-content>
   <ion-button  [routerLink]="['/estadisticas/estadisticas2']">Tabla general</ion-button>
-  <ion-button  [routerLink]="['/estadisticas/estadisticas3']">Tabla de Goleo</ion-button>
-  <ion-button  [routerLink]="['/estadisticas/estadisticas4']">Suspensiones</ion-button>
+  <ion-button  [routerLink]="['/estadisticas/estadisticas4']">Tabla de Goleo</ion-button>
+  <ion-button  [routerLink]="['/estadisticas/estadisticas5']">Suspensiones</ion-button>
 </ion-content>
