@@ -1,0 +1,33 @@
+.stats-header{
+    height: 50px;
+    width: 900px;
+    position:relative;
+    top: 80px;
+    left: 80px;
+    ion-col{
+        background-color: lightgrey;
+        color: black;
+    }    
+}
+.team-stats{
+    height: 50px;
+    width: 900px;
+    position:absolute;
+    top: 130px;
+    left: 80px;
+    ion-col{
+        background-color: lightgrey;
+        color: black;
+    }    
+}
+.stats-player{
+    height: 50px;
+    width: 400px;
+    position:absolute;
+    top: 300px;
+    left: 280px; 
+    ion-col{
+        background-color: lightgrey;
+        color: black;
+    }   
+}
