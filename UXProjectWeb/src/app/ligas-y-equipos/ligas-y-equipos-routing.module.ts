@@ -7,6 +7,14 @@ const routes: Routes = [
   {
     path: '',
     component: LigasYEquiposPage
+  },
+  {
+    path: 'detalles',
+    loadChildren: () => import('../ligas-y-equipos/detalles/detalles.module').then( m => m.DetallesPageModule)
+  },
+  {
+    path: 'detalles',
+    loadChildren: () => import('./detalles/detalles.module').then( m => m.DetallesPageModule)
   }
 ];
 
