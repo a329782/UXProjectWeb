@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { LeaguesService } from '../../leagues.service';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-detalles',
@@ -7,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetallesPage implements OnInit {
 
-  constructor() { }
+  constructor(private leaguesService: LeaguesService, private router: Router, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
   }

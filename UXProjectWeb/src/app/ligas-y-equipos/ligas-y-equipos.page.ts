@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { LigasService } from '../ligas.service';
+import { LeaguesService } from '../leagues.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -15,7 +15,7 @@ export class LigasYEquiposPage implements OnInit, OnDestroy {
 
   leagueTeams = [];
   
-  constructor(private leaguesService: LigasService, private router: Router) { }
+  constructor(private leaguesService: LeaguesService, private router: Router) { }
 
   openTeamDetailsPage(leagueDay){
     this.router.navigateByUrl('./detalles');

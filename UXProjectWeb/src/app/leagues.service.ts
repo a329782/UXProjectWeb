@@ -4,7 +4,7 @@ import { BehaviorSubject } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class LigasService {
+export class LeaguesService {
 
   private leagueDaySource = new BehaviorSubject('default leagueDay');
   currentLeagueDay = this.leagueDaySource.asObservable();
@@ -14,7 +14,6 @@ export class LigasService {
 
   private playersScoreSource = new BehaviorSubject('default player');
   currentPlayersScore = this.playersScoreSource.asObservable();
-
 
   private leagues = [
     {
