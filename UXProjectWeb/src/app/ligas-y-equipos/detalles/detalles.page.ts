@@ -22,7 +22,7 @@ export class DetallesPage implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-      this.subscription.unsubscribe();
+    this.subscription.unsubscribe();
   }
 
 }
