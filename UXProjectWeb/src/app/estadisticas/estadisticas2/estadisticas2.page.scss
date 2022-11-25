@@ -1,38 +1,85 @@
 .team-bttn-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 100%;
+    align-items: left;
 
-    ion-label.pj-lbl{
-        position: static;
-        left: 20px;
+    .nom-lbl{
+        position: absolute;
+        left: 0px;
     }
-    ion-label.pj-lbl{
-        position: relative;
-        left: 20px;
+    .pj-lbl{
+        position: absolute;
+        left:200px;
     }
-    
-    ion-label.pg-lbl{
-        position: relative;
-        left: 20px;
+    .pg-lbl{
+        position: absolute;
+        left:300px;
     }
-    ion-label.pe-lbl{
-        position: relative;
-        left: 20px;
+    .pe-lbl{
+        position: absolute; 
+        left:410px;
     }
-    ion-label.pp-lbl{
-        position: relative;
-        left: 20px;
+    .pp-lbl{
+        position: absolute;
+        left:520px;
+    }   
+    .gf-lbl{
+        position: absolute;
+        left:630px;
     }
-    ion-label.gf-lbl{
-        position: relative;
-        left: 20px;
+    .gc-lbl{
+        position: absolute;
+        left:740px;
     }
-    ion-label.gc-lbl{
-        position: relative;
-        left: 20px;
+    .pts-lbl{
+        position: absolute;
+        left:860px;
+    }
+    .pos-lbl{
+        position: absolute;
+        left:960px;
     }
 
+}
+.stats-header{
+    align-items: left;
+
+    ion-col{
+        background-color: lightgrey;
+        color: black;
+        height: 50px;
+        width: 100px;
+    }  
+    .pj-head{
+        position:absolute;
+        left:100px; 
+    } 
+    .pg-head{
+        position:absolute;
+        left: 80px;
+    } 
+    .pe-head{
+        position:absolute;
+        left: 80px;
+    } 
+    .pp-head{
+        position:absolute;
+        
+        left:80px; 
+    } 
+    .gf-head{
+        position:absolute;
+        left: 80px;
+    } 
+    .gc-head{
+        position:absolute;
+        left: 80px;
+    } 
+    .pts-head{
+        position:absolute;
+        
+        left:80px; 
+    } 
+    .pos-head{
+        position:absolute;
+        left: 80px;
+    } 
 }
