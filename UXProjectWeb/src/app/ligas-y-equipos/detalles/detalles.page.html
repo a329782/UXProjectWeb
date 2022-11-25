@@ -10,8 +10,21 @@
 
 
 <ion-content>
+
   <div class="container">
-    Hola
+
+    <div class="info-container">
+      <ion-list-header>
+        <ion-label class="day-lbl">Equipo seleccionado</ion-label>
+      </ion-list-header>
+    </div>
+
+    <ng-container>
+      <ion-item *ngFor="let player of leagues[3].players">
+        <ion-label>{{player.name}}</ion-label>
+      </ion-item>
+    </ng-container>
 
   </div>
+
 </ion-content>

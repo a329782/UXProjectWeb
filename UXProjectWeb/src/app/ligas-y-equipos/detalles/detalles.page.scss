@@ -1,7 +1,3 @@
-ion-back-button {
-    color: #ffffff;
-    font-weight: bold;
-}
 .container {
     margin-left: 10%;
     margin-right: 10%;
@@ -18,4 +14,21 @@ ion-back-button {
     ion-label{
         text-transform: capitalize;
     }
+}
+
+.info-container{
+    display: flex;
+    justify-content: space-between;
+    .day-lbl {
+        font-size: 1rem;
+        font-weight: bold;
+    }
+}
+
+ion-label{
+    color: white;
+}
+
+ion-list-header{
+    --background: #7A6200;
 }
