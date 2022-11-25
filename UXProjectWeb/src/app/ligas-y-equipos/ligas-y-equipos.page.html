@@ -9,5 +9,35 @@
 
 
 <ion-content>
+  <div class="item-container">
+
+    <ion-item>
+      <ion-select placeholder="Seleccionar liga" interface="popover" [(ngModel)]="statisticsDay">
+        <ion-select-option [value]="leagueDay.day" *ngFor="let leagueDay of leagueTeams">
+          Liga {{leagueDay.day}}
+        </ion-select-option>
+      </ion-select>
+      <ion-icon name="caret-down-outline"></ion-icon>
+    </ion-item>
+
+  </div>
+
+  <div class="container">
+
+    <div class="info-container">
+      <ion-list-header>
+        <ion-label class="day-lbl">Liga {{statisticsDay}}</ion-label>
+      </ion-list-header>
+    </div>
+
+    <ng-container *ngFor="let leagueTeam of leagueTeams">
+      <ng-container *ngIf="statisticsDay===leagueTeam.day">
+        <ion-item button routerLink="./detalles" detail="true" *ngFor="let teamNames of leagueTeam.teams">
+          <ion-label>{{teamNames.name}}</ion-label>
+        </ion-item>
+      </ng-container>
+    </ng-container>
+
+  </div>
 
 </ion-content>

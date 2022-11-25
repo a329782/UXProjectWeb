@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="new-background-color">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Detalles del equipo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+  <div class="container">
+
+    <div class="info-container">
+      <ion-list-header>
+        <ion-label class="day-lbl">Equipo seleccionado</ion-label>
+      </ion-list-header>
+    </div>
+
+    <ng-container>
+      <ion-item *ngFor="let player of leagues[3].players">
+        <ion-label>{{player.name}}</ion-label>
+      </ion-item>
+    </ng-container>
+
+  </div>
+
+</ion-content>

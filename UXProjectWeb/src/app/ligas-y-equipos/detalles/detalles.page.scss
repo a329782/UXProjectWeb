@@ -1,22 +1,3 @@
-.item-container {
-    display: flex;
-    justify-content: space-between;
-    ion-item{
-        margin-left: 10%;
-        width: 36.5vh;
-        --border-radius: 10px;
-        --border-width: 2px;
-        --min-height: fit-content;
-        padding-top: 2%;
-        ion-select{
-            width: 100%;
-        }
-        ion-select::part(icon) {
-            display: none !important;
-        }
-    }
-}
-
 .container {
     margin-left: 10%;
     margin-right: 10%;
