@@ -9,4 +9,20 @@
 
 <ion-content>
 
+  <div class="container">
+
+    <div class="info-container">
+      <ion-list-header>
+        <ion-label class="day-lbl">Lista de árbitros</ion-label>
+      </ion-list-header>
+    </div>
+
+    <ng-container>
+      <ion-item button routerLink="./detalles" detail="true" *ngFor="let player of leagues[3].players">
+        <ion-label>{{player.name}}</ion-label>
+      </ion-item>
+    </ng-container>
+
+  </div>
+
 </ion-content>
