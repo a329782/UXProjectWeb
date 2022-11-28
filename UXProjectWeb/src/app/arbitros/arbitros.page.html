@@ -9,4 +9,25 @@
 
 <ion-content>
 
+  <div class="container">
+
+    <div class="info-container">
+      <ion-list-header>
+        <ion-label class="day-lbl">LISTA DE ÁRBITROS</ion-label>
+      </ion-list-header>
+    </div>
+
+    <ng-container>
+      <ion-item button routerLink="./detalles" detail="true" *ngFor="let player of leagues[3].players">
+        <ion-label>{{player.name}}</ion-label>
+      </ion-item>
+    </ng-container>
+
+    <div class="link" routerLink="./registro-de-arbitros">
+      <ion-icon ios="add-circle-outline" md="add-circle-sharp"></ion-icon>
+      <a href="">REGISTRAR NUEVO ÁRBITRO</a>
+    </div>
+
+  </div>
+
 </ion-content>

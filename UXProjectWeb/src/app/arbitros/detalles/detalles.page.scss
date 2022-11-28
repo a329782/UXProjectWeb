@@ -7,18 +7,10 @@
     ion-item{
         --background: #D9D9D9;
         height: 42px;
+    }
+    ion-item{
         margin-bottom: 0.3%;
     }
-    ion-label{
-        text-transform: capitalize;
-    }
-}
-
-a {
-    margin-left: 0.5%;
-    font-weight: bold;
-    font-size: 12px;
-    color: blue;
 }
 
 .info-container{
@@ -30,14 +22,29 @@ a {
     }
 }
 
-ion-label{
-    color: white;
-}
-
 ion-list-header{
     --background: #7A6200;
 }
 
-.link{
-    margin-left: 50.8vw; 
+.titulo {
+    font-size: 180%;
+    text-align: left;
+    margin-bottom: 4vh;
+}
+
+.subtitulo {
+    font-weight: bold;
+    margin-top: 1vh;
+}
+
+.colLeft {
+    margin-left: 10vw;
+}
+
+.colRight {
+    margin-right: 10vw;
+}
+
+.a{
+    margin-top: -2vh;
 }
