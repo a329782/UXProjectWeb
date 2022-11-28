@@ -8,41 +8,103 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <div class="container">
-    
-    <ion-grid [fixed]="true">
-      <ion-row>
-        <ion-col class="titulo colLeft">Datos del árbitro</ion-col>
-        <ion-col></ion-col>
-      </ion-row>
-      <ion-row class="subtitulo">
-        <ion-col class="colLeft">Nombre del árbitro</ion-col>
-        <ion-col class="colRight">Comentarios:</ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col class="colLeft">Juan Pérez</ion-col>
-        <ion-col class="colRight">Esta disponible de lunes a jueves desde las 5 de la tarde a las 10 de la noche.</ion-col>
-      </ion-row>
+<ion-content fullscreen class="ion-padding" scroll-y="false">
 
-      <ion-row class="subtitulo a">
-        <ion-col class="colLeft">Correo</ion-col>
-        <ion-col></ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col class="colLeft">juanfernando_perez@hotmail.com</ion-col>
-        <ion-col></ion-col>
-      </ion-row>
+  <ion-slides #registerSlider class="container" [options]="slidesOpts">
+    <ion-slide>
+      <p *ngIf="submitAttempt" style="color: #ea6153;">
+        Revise los datos ingresados.
+      </p>
 
-      <ion-row class="subtitulo">
-        <ion-col class="colLeft">Teléfono</ion-col>
-        <ion-col></ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col class="colLeft">614-423-4231</ion-col>
-        <ion-col></ion-col>
-      </ion-row>
-    </ion-grid>
+      <ion-list lines="none">
+        <form [formGroup]="slideOneForm">
+          <ion-item fill="outline">
+            <ion-label position="floating">Nombre(s)</ion-label>
+            <ion-input formControlName="firstName" type="text"></ion-input>
+          </ion-item>
 
-  </div>
+          <ion-item fill="outline">
+            <ion-label position="floating">Apellidos</ion-label>
+            <ion-input formControlName="lastName" type="text"></ion-input>
+          </ion-item>
+
+          <ion-item fill="outline">
+            <ion-label position="floating">Correo</ion-label>
+            <ion-input formControlName="mail" type="email" ngModel email></ion-input>
+          </ion-item>
+
+          <ion-item fill="outline">
+            <ion-label position="floating">Teléfono</ion-label>
+            <ion-input formControlName="phone" type="tel"></ion-input>
+          </ion-item>
+        </form>
+      </ion-list>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-grid [fixed]="true">
+        <ion-row>
+          <ion-col class="titulo colLeft">Datos del árbitro</ion-col>
+          <ion-col></ion-col>
+        </ion-row>
+        <ion-row class="subtitulo">
+          <ion-col class="colLeft">Nombre del árbitro</ion-col>
+          <ion-col class="colRight">Comentarios:</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="colLeft">
+            <span id="sumName"></span>
+          </ion-col>
+          <ion-col class="colRight">
+            <ion-textarea></ion-textarea>
+          </ion-col>
+        </ion-row>
+
+        <ion-row class="correo subtitulo">
+          <ion-col class="colLeft">Correo</ion-col>
+          <ion-col></ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="colLeft">
+            <span id="sumEmail"></span>
+          </ion-col>
+          <ion-col></ion-col>
+        </ion-row>
+
+        <ion-row class="subtitulo">
+          <ion-col class="colLeft">Teléfono</ion-col>
+          <ion-col></ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="colLeft">
+            <span id="sumPhone"></span>
+          </ion-col>
+          <ion-col></ion-col>
+        </ion-row>
+      </ion-grid>
+
+
+    </ion-slide>
+
+  </ion-slides>
+
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <div>
+      <ion-button strong [style.visibility]="isBeginning ? 'hidden' : ''" (click)="back()">
+        <ion-icon strong slot="start" name="chevron-back"></ion-icon>
+        <span>Volver</span>
+      </ion-button>
+
+      <ion-button strong shape="round" color="primary" [style.visibility]="isEnd ? 'hidden' : ''" (click)="next()">
+        <span>Siguiente</span>
+      </ion-button>
+
+      <ion-button strong shape="round" color="primary" [style.visibility]="isBeginning ? 'hidden' : ''" (click)="back()" routerLink="/arbitros">
+        <span>Finalizar</span>
+      </ion-button>
+    </div>
+  </ion-toolbar>
+</ion-footer>
