@@ -5,8 +5,8 @@
     top: 80px;
     left: 80px;
     ion-col{
-        background-color: lightgrey;
-        color: black;
+        background-color: #7A6200;
+        color: white;
     }    
 }
 .team-stats{
@@ -16,18 +16,29 @@
     top: 130px;
     left: 80px;
     ion-col{
-        background-color: lightgrey;
-        color: black;
+        background-color: #7a62006b;
+        color: white ;
     }    
+}
+.stats-playerh{
+    height: 50px;
+    width: 900px;
+    position:absolute;
+    top: 300px;
+    left: 80px; 
+    ion-col{
+        background-color: #7A6200;
+        color: black ;
+    }   
 }
 .stats-player{
     height: 50px;
-    width: 400px;
+    width: 900px;
     position:absolute;
-    top: 300px;
-    left: 280px; 
+    top: 330px;
+    left: 80px; 
     ion-col{
-        background-color: lightgrey;
-        color: black;
+        background-color: #D9D9D9;
+        color: black ;
     }   
 }
