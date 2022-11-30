@@ -61,10 +61,12 @@ export class RegistroDeEquiposPage implements OnInit {
     this.currentSlide = this.slides[index];
     this.isBeginning = await this.ionSlides.isBeginning();
     this.isEnd = await this.ionSlides.isEnd();
+    this.summary();
   }
 
   onSlidesDidChange() {
     this.ionContent.scrollToTop();
+    this.summary();
   }
 
   next() {
@@ -75,6 +77,7 @@ export class RegistroDeEquiposPage implements OnInit {
 
   back() {
     this.teamRegisterSlider.slidePrev();
+    this.summary();
   }
 
   summary(){
