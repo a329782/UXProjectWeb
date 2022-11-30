@@ -10,7 +10,14 @@
 
 <ion-content fullscreen class="ion-padding" scroll-y="false">
 
-  <ion-slides #registerSlider class="container" [options]="slidesOpts">
+  <div class="steps">
+    <span [style]="currentSlide === slides[0] ? bold : boldNot">{{ slides[0] }}</span>
+    <ion-icon name="caret-forward-outline"></ion-icon>
+    <span [style]="currentSlide === slides[1] ? bold : boldNot">{{ slides[1] }}</span>
+  </div>
+
+  <ion-slides #refereeRegisterSlider class="container" [options]="slidesOpts" (ionSlideDidChange)="onSlidesDidChange()"
+  (ionSlideWillChange)="onSlidesChanged()">
     <ion-slide>
       <p *ngIf="submitAttempt" style="color: #ea6153;">
         Revise los datos ingresados.
@@ -21,12 +28,12 @@
         <div class="text-boxes">
           <ion-item>
             <ion-label position="floating">Nombre(s)</ion-label>
-            <ion-input formControlName="firstName" type="text"></ion-input>
+            <ion-input class="capitalize" formControlName="firstName" type="text"></ion-input>
           </ion-item>
   
           <ion-item>
             <ion-label position="floating">Apellidos</ion-label>
-            <ion-input formControlName="lastName" type="text"></ion-input>
+            <ion-input class="capitalize" formControlName="lastName" type="text"></ion-input>
           </ion-item>
   
           <ion-item>
@@ -54,7 +61,7 @@
         </ion-row>
         <ion-row>
           <ion-col class="colLeft">
-            <span id="sumName"></span>
+            <span class="capitalize" id="sumName"></span>
           </ion-col>
           <ion-col class="colRight">
             <ion-textarea></ion-textarea>
@@ -103,7 +110,7 @@
         <span>Siguiente</span>
       </ion-button>
 
-      <ion-button strong shape="round" color="primary" [style.visibility]="isBeginning ? 'hidden' : ''" (click)="back()"
+      <ion-button strong shape="round" color="primary" [style.visibility]="isEnd ? '' : 'hidden'" (click)="back()"
         routerLink="/arbitros">
         <span>Finalizar</span>
       </ion-button>

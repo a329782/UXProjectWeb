@@ -84,3 +84,17 @@ ion-slide {
     padding-bottom: 20px;
 
 }
+
+.steps {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    ion-icon {
+        font-size: larger;
+        color: var(--ion-color-medium);
+    }
+}
+
+.capitalize {
+    text-transform: capitalize;
+}

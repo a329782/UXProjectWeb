@@ -11,7 +11,7 @@ export class RegistroDeArbitrosPage implements OnInit {
 
   @ViewChild(IonContent, { static: true }) ionContent: IonContent;
   @ViewChild(IonSlides, { static: false }) ionSlides: IonSlides;
-  @ViewChild('registerSlider') registerSlider;
+  @ViewChild('refereeRegisterSlider') refereeRegisterSlider;
 
   public slidesOpts = {
     allowTouchMove: false,
@@ -25,6 +25,12 @@ export class RegistroDeArbitrosPage implements OnInit {
 
   public submitAttempt: boolean = false;
 
+  public slides: string[];
+  public currentSlide: string;
+
+  public bold = "color: var(--ion-color-primary); font-weight: bold;";
+  public boldNot = "color: var(--ion-color-medium); font-weight: normal;";
+
   constructor(public formBuilder: FormBuilder) {
     this.slideOneForm = formBuilder.group({
       firstName: ['', Validators.required],
@@ -35,31 +41,44 @@ export class RegistroDeArbitrosPage implements OnInit {
   }
 
   ngOnInit() {
+    this.buildSlides();
+  }
+
+  buildSlides() {
+    const slides = ['Datos del árbitro', 'Revisión de datos'];
+    this.currentSlide = slides[0];
+    this.slides = slides;
+  }
+
+  async onSlidesChanged() {
+    const index = await this.ionSlides.getActiveIndex();
+    this.currentSlide = this.slides[index];
+    this.isBeginning = await this.ionSlides.isBeginning();
+    this.isEnd = await this.ionSlides.isEnd();
+    this.summary();
+  }
+
+  onSlidesDidChange() {
+    this.ionContent.scrollToTop();
+    this.summary();
   }
 
   next() {
-    //if (this.slideOneForm.valid) {
-      this.registerSlider.slideNext();
-      this.isBeginning = false;
-      this.isEnd = true;
-      this.summary();
-    //}
+    this.refereeRegisterSlider.slideNext();
+    this.summary();
+
   }
 
   back() {
-    this.registerSlider.slidePrev();
-    this.isBeginning = true;
-    this.isEnd = false;
+    this.refereeRegisterSlider.slidePrev();
+    this.summary();
   }
 
   summary(){
-    let name = document.getElementById("sumName").innerHTML = `${this.slideOneForm.value.firstName} ${this.slideOneForm.value.lastName}`;
-    let email = document.getElementById("sumEmail").innerHTML = this.slideOneForm.value.mail;
-    let phone = document.getElementById("sumPhone").innerHTML = this.slideOneForm.value.phone;
+    document.getElementById("sumName").innerHTML = `${this.slideOneForm.value.firstName} ${this.slideOneForm.value.lastName}`;
+    document.getElementById("sumEmail").innerHTML = this.slideOneForm.value.mail;
+    document.getElementById("sumPhone").innerHTML = this.slideOneForm.value.phone;
 
-    name = this.slideOneForm.value.firstName + this.slideOneForm.value.lastName;
-    email = this.slideOneForm.value.mail;
-    phone = this.slideOneForm.value.phone;
   }
 
   save() {
