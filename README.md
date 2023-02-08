@@ -1,104 +1,96 @@
-# UXProjectApp
+# Sistema de Administración de Ligas de Fútbol (Repositorio Web)
+Este repositorio fue creado para el proyecto semestral de la materia de User Experience donde simulamos un ambiente de trabajo real, utilizando la metodología agil SCRUM, trabajando con un cliente "real" para realizar una aplicación de software para su negocio. Nuestro equipo estaba conformado de un Project Owner, SCRUM Master y un Software Architect. Una vez contactamos con el cliente y establecimos medios de comunicación, empezamos a trabajar en el proyecto.
 
-## Getting started
 
-Para clonar este repositorio, dentro de la carpeta projectApp:
+## Descripción del proyecto
+En cortas palabras, el cliente buscaba modernizar la forma en la que administra su negocio de canchas y ligas de futbol. La forma en la que el cliente administraba su negocio era utilizando lapiz y papel para inscribir jugadores y capitanes, organizar juegos entre equipos, y mantener un sistema de ligas y equipos, teniendo en cuenta que existian multiples sedes, o canchas de futbol, en diferentes locaciones, cada una con sus propias ligas y equipos. Ademas de eso, el cliente también pidió una aplicación movil para los jugadores. En la aplicación los jugadores podrían ver sus estadisticas, sus juegos recientes y futuros, y ademas tener la funcionalidad para confirmar su geolocalización en la cancha.
 
-Crear la carpeta node_modules:
 
-`npm install`
+## Primeros pasos
+Comenzamos conversando con el cliente, estableciendo una relación. Lo primero fue definir qué es lo que el cliente quería y cómo lo quería. Y comenzamos a trabajar en un [documento de especificación de requerimientos de software](https://docs.google.com/document/d/e/2PACX-1vQb-tU3OazAzk4_izS9hY0dVeHTkuQtvMWsc3ZOLrXwnvwcKtr94l-94VT-voqM7tSXKgIKCPxVRYW-/pub) (SRS):
 
-Crear la carpeta www/, build/ y para poder correrlo en local:
+![imagen](https://user-images.githubusercontent.com/10736003/217407121-d69eea2c-ed61-43de-a3b5-abda33b5c45e.png)
 
-`ionic serve`
+Una vez que establecimos los requerimientos y reglas de negocio, comenzamos a definir los detalles y tecnologias del proyecto en un [documento de arquitectura de software](https://docs.google.com/document/d/e/2PACX-1vSm7SUUf1KKOgEWXVCt7V8oElmXqQfvKU7N6AQp9EZspVZgifeGGYnFHaXWsUMQ-p78Yo22Srvw9mfj/pub). Decidimos optar por una aplicación web basada en la nube con un patrón de diseño MVC:
 
-Configurar capacitor
+![imagen](https://user-images.githubusercontent.com/10736003/217407246-b7f63b2b-486d-479b-a3ae-24b6f82fce87.png)
 
-`ionic build`
 
-Cada vez que se realice un build hay que copiar cambios a los proyectos nativos:
+## Prototipos
+Con los requerimientos y la arquitectura definidos, solicitamos al cliente logos e imagenes de su negocio, así como la paleta de colores de su elección y pusimos manos a la obra en realizar prototipos de lo que sería la aplicación movil para jugadores y la pagina web para los administradores de las canchas. Empezamos con prototipos simples tipo wireframe y fuimos evolucionando hasta llegar a los diseños finales y aprobados por el cliente:
 
-`ionic cap copy`
+![imagen](https://user-images.githubusercontent.com/10736003/217407461-f6d04b3d-c88e-4266-81f0-5663bb8a331a.png)
 
-Despues de actualizar porciones de codigo (como agregar un nuevo plugin) usar el comando sync:
+![imagen](https://user-images.githubusercontent.com/10736003/217407607-b5fb6c2b-fad3-4eca-a55f-03c62b1bb5a0.png)
 
-`ionic cap sync`
 
-## Add your files
+## Resultados del proyecto
+Desafortunadamente, para el final del semestre no tuvimos tiempo de implementar toda la aplicación web. Nos quedamos a la mitad de la implementación del front-end de la parte web y movil (instrucciones de como instalar y correr demos mas abajo en el readme), y no pudimos empezar la parte del back-end.
 
+
+## Conclusiones
+Podemos decir sin lugar a dudas que esta experiencia impactó nuestro punto de vista sobre lo que es trabajar con un cliente y un equipo en un ambiente de desarrollo. Si bien, técnicamente, nuestro proyecto fue un fracaso al no haber cumplido con la fecha limite, nos llevamos una muy buena experiencia de aprendizaje y hasta mejoración personal; utilizamos nuevas tecnologías que no habiamos usado antes, utilizamos la metodología SCRUM, aprendimos sobre patrones de diseño, sesgos cognitivos, responsive design, entre otros conceptos mas.
+
+
+## Requerimientos del proyecto
+Para correr el proyecto es esencial instalar los siguientes programas y actualizaciones:
+
+**Git y Node JS/NPM**
+[Esta guía](https://www.freecodecamp.org/news/how-to-install-node-js-on-ubuntu-and-update-npm-to-the-latest-version/) tiene lo necesario para instalar Node y actualizar NPM, y esta otra [guía oficial de github](https://github.com/git-guides/install-git) contiene lo necesario para instalar git.
+
+**Clonando el repositorio**
+Empezamos por clonar el repositorio actual, podemos utilizar el comando:
 ```
-cd existing_repo
-git remote add origin https://github.com/a329782/UXProjectApp.git
-git branch -M main
-git push -uf origin main
+git clone git@github.com:a329782/UXProjectWeb.git
 ```
 
-## Integrate with your tools
+**Ionic CLI**
+```
+npm install -g @ionic/cli
+```
 
-## Test and Deploy
+**Dependencias del proyecto**
+Debido a la forma en la que configuramos el repositorio, se tiene que navegar a la carpeta interna UXProjectWeb:
+```
+cd ./UXProjectWeb
+```
+Y una vez ahi podremos instalar las dependencias con:
+```
+npm install
+```
 
-Dentro de la carpeta projectApp utilizar el siguiente comando en terminal:
 
-`ionic serve`
+## Corriendo pruebas
+Para correr el proyecto simplemente podemos escribir el comando:
+```
+ionic serve
+```
+Y se iniciará una pagina en la dirección http://localhost:8100/login y simplemente podemos cliquear el botón de iniciar sesión para continuar sin necesidad de introducir credenciales.
 
----
+![imagen](https://user-images.githubusercontent.com/10736003/217407692-b44826dc-392a-466a-8026-b662e73c355c.png)
 
-# Editing this README
+![imagen](https://user-images.githubusercontent.com/10736003/217407796-cdee73e4-374d-4fdc-a26b-7fa7b785cd20.png)
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thank you to [makeareadme.com](https://www.makeareadme.com/) for this template.
 
-## Suggestions for a good README
+## Construido con
+* Visual Studio Code - Editor de texto principal
+* xCode - Editor de texto para IOS
+* Figma - Herramienta para prototipado
+* Ionic - Principal framework de programación
+* Angular - Framework secundario
 
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
 
-## Name
+## Autores
+* **Humberto Navarro** - [Repositorio](https://github.com/fanpug)
+* **Alejandro Díaz** - [Repositorio](https://github.com/a329782)
+* **Enrique Fernandez** - [Repositorio](https://github.com/lfernandez17)
 
-Choose a self-explaining name for your project.
 
-## Description
+## Licencia
+El proyecto tiene libre licencia o algo asi ;)
 
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
 
-## Badges
+## Agradecimientos
+Queremos agradecer nuestro profesor Adrián Alarcón y su colega Rene Rodriguez por brindarnos su tiempo y experiencia para este ejercicio.
 
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
-
-## Installation
-
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
-
-## Usage
-
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
-
-## Support
-
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Roadmap
-
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-
-Show your appreciation to those who have contributed to the project.
-
-## License
-
-For open source projects, say how it is licensed.
-
-## Project status
-
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+Gracias a las personas de PurpleBooth por su plantilla/referencia de como debe ser el [formato de un readme](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2).
