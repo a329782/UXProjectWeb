@@ -1,6 +1,8 @@
 # Sistema de Administración de Ligas de Fútbol (Repositorio Web)
 Este repositorio fue creado para el proyecto semestral de la materia de User Experience donde simulamos un ambiente de trabajo real, utilizando la metodología agil SCRUM, trabajando con un cliente "real" para realizar una aplicación de software para su negocio. Nuestro equipo estaba conformado de un Project Owner, SCRUM Master y un Software Architect. Una vez contactamos con el cliente y establecimos medios de comunicación, empezamos a trabajar en el proyecto.
 
+El repositorio para la parte movil puede encontrarse en la siguiente liga: https://github.com/a329782/UXProjectApp .
+
 
 ## Descripción del proyecto
 En cortas palabras, el cliente buscaba modernizar la forma en la que administra su negocio de canchas y ligas de futbol. La forma en la que el cliente administraba su negocio era utilizando lapiz y papel para inscribir jugadores y capitanes, organizar juegos entre equipos, y mantener un sistema de ligas y equipos, teniendo en cuenta que existian multiples sedes, o canchas de futbol, en diferentes locaciones, cada una con sus propias ligas y equipos. Ademas de eso, el cliente también pidió una aplicación movil para los jugadores. En la aplicación los jugadores podrían ver sus estadisticas, sus juegos recientes y futuros, y ademas tener la funcionalidad para confirmar su geolocalización en la cancha.
