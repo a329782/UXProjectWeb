@@ -43,7 +43,7 @@ Para correr el proyecto es esencial instalar los siguientes programas y actualiz
 **Clonando el repositorio**
 Empezamos por clonar el repositorio actual, podemos utilizar el comando:
 ```
-git clone git@github.com:a329782/UXProjectWeb.git
+git clone https://github.com/a329782/UXProjectWeb.git
 ```
 
 **Ionic CLI**
